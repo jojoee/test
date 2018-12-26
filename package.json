@@ -1,0 +1,47 @@
+{
+  "name": "test",
+  "version": "0.0.0-development",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "jest": "jest",
+    "jest.watch": "npm run test -- --watch",
+    "coverage.check": "jest --coverage",
+    "coverage.report": "cat ./coverage/lcov.info | codecov",
+    "standard": "standard",
+    "validate": "npm run standard && npm run coverage.check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jojoee/test.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jojoee/test/issues"
+  },
+  "homepage": "https://github.com/jojoee/test#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "codecov": "^3.1.0",
+    "jest": "^23.6.0",
+    "standard": "^12.0.1"
+  },
+  "jest": {
+    "verbose": true,
+    "testMatch": [
+      "**/*.test.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    }
+  },
+  "standard": {
+    "verbose": true,
+    "env": "jest"
+  }
+}
